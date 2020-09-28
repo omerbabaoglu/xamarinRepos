@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "651446836620",
+    "firebase_url": "https://fir-sample-cec98.firebaseio.com",
+    "project_id": "fir-sample-cec98",
+    "storage_bucket": "fir-sample-cec98.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:651446836620:android:b319403cde4ada1d6c0aa9",
+        "android_client_info": {
+          "package_name": "com.companyname.socialmediaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "651446836620-20ekjl5eauh0pt8h1m24lmndhrerlosu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDINRde7TbT5owoVEPX0FXVurTPRKxP8Lk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "651446836620-20ekjl5eauh0pt8h1m24lmndhrerlosu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

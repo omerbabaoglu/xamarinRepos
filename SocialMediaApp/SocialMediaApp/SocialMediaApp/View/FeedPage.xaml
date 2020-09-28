@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SocialMediaApp.View.FeedPage"
+             xmlns:ViewModel="clr-namespace:SocialMediaApp.ViewModel"
+             IconImageSource="home-131964784858199667_24.ico"
+             Title="Feed"
+             BackgroundColor="#F3BF20">
+    <ContentPage.BindingContext>
+        <ViewModel:FeedViewModel></ViewModel:FeedViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Margin="10,10,10,30">
+            <ListView x:Name="postlistesi"  HasUnevenRows="True" ItemsSource="{Binding postlar}" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                            <Grid BackgroundColor="White" Margin="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Username" FontAttributes="Bold"  FontSize="Large"></Label>
+
+                                </StackLayout>
+                                <StackLayout Grid.Row="1">
+                                    <Label Text="{Binding PostTxt}" FontSize="Title" TextColor="Black"></Label>
+
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" Grid.Row="2">
+                                    <Button Text="👍" FontSize="15" Margin="10,0,10,0"></Button>
+                                        <Button Text="👎" FontSize="15" Margin="10,0,10,0"></Button>
+                                        <Button Text="❗️" FontSize="15" Margin="10,0,10,0"></Button>
+                                </StackLayout>
+                            </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button x:Name="RefreshBtn"  Text="Refresh"  Command="{Binding GetPostCommand}" ></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SocialMediaApp.View.RegisterWithMailPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" Padding="10">
+                <Label Text="Türkçe (Türkiye) ⇓" TextColor="DarkGray" HorizontalOptions="Center" VerticalOptions="Start"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="1" Margin="10,50,10,0">
+                <ScrollView>
+                    <StackLayout >
+                        <Image Source="https://i.hizliresim.com/JKD24H.png" HeightRequest="100"></Image>
+                    <Entry x:Name="NameEntry" Placeholder="İsim Soyisim giriniz..." TextColor="Black" BackgroundColor="#fafafa"></Entry>
+                        <Entry x:Name="UserNameEntry"  Placeholder="Kullanıcı adınızı giriniz..." BackgroundColor="#fafafa"></Entry>
+                        <Entry x:Name="MailEntry" Placeholder="E-mail adresinizi giriniz..." BackgroundColor="#fafafa"></Entry>
+                        <Entry x:Name="PasswordEntry" Placeholder="Şifrenizi giriniz..." BackgroundColor="#fafafa" IsPassword="True"></Entry>
+                    <Button x:Name="SignUpButton" Text="Kaydol" BackgroundColor="#0095f6" HorizontalOptions="CenterAndExpand" TextColor="White" WidthRequest="1000" Clicked="SignUpButton_Clicked" ></Button>
+            </StackLayout>
+            </ScrollView>
+            </StackLayout>
+            <StackLayout Grid.Row="2" Margin="0" >
+                <Label BackgroundColor="#bababa" HeightRequest="1" ></Label>
+                <StackLayout Orientation="Horizontal"  VerticalOptions="End" HorizontalOptions="Center">
+                    <Label Text="Hesabın zaten var mı?" TextColor="DarkGray"></Label>
+                    <Button x:Name="BackToLoginPage" Text="Giriş yap." TextColor="Black" FontAttributes="Bold" BackgroundColor="White" BorderWidth="0" Padding="0,0,0,30" Clicked="BackToLoginPage_Clicked"></Button>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SocialMediaApp.View.ProfilePage"
+             IconImageSource="user-131965017684610507_24.ico"
+             Title="Profile" d:IconImageSource="https://i.hizliresim.com/JKD24H.png"
+             BackgroundColor="#F3BF20">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="SignOutButton" Clicked="SignOutButton_Clicked" Text="Çıkış Yap"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

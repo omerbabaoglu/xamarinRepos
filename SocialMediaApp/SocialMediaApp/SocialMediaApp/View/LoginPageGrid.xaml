@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SocialMediaApp.View.LoginPageGrid">
+    <ContentPage.Content>
+        <Grid BackgroundColor="White" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" ></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0" Padding="10" />
+            <Label Text="Türkçe (Türkiye) ⇓" TextColor="DarkGray" HorizontalOptions="Center" VerticalOptions="Start"/>
+
+            <Grid Grid.Row="1" Margin="10">
+                <Grid.RowDefinitions>
+                    
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Image Source="https://i.hizliresim.com/LiL5Zh.jpg" HeightRequest="150" VerticalOptions="End" />
+                <Entry x:Name="UsersMail" Placeholder="PhoneNumber,e-mail or username"  PlaceholderColor="DarkGray" BackgroundColor="#fafafa" Grid.Row="1" ></Entry>
+                <Entry x:Name="UsersPassword" Placeholder="Password" PlaceholderColor="DarkGray" BackgroundColor="#fafafa" Grid.Row="2" IsPassword="True"></Entry>
+                <Button x:Name="LoginButton" Grid.Row="3" Text="Giriş Yap" BackgroundColor="#0095f6" HorizontalOptions="CenterAndExpand" TextColor="White" WidthRequest="1000" Clicked="LoginButton_Clicked" ></Button>
+
+                <Label Text="Giriş detaylarını mu unuttun? Giriş yapmak için yardım al " TextColor="DarkGray" Grid.Row="4" />
+                <Grid Grid.Row="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="60"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" BackgroundColor="#bababa" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center"></Label>
+                    <Label Text="YA DA" TextColor="#bababa" Grid.Column="1" VerticalOptions="Center"  Margin="10,0,10,0"></Label>
+                    <Label Grid.Column="2" BackgroundColor="#bababa" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center"></Label>
+                </Grid>
+                <Button Grid.Row="6" Text="Google ile giriş yap" TextColor="#385185" BackgroundColor="White"></Button>
+
+            </Grid>
+            <StackLayout Grid.Row="2" Margin="0" >
+                <Label BackgroundColor="#bababa" HeightRequest="1" ></Label>
+                <StackLayout Orientation="Horizontal"  VerticalOptions="End" HorizontalOptions="Center">
+                    <Label Text="Hesabın yok mu?" TextColor="DarkGray"></Label>
+                    <Button x:Name="GoToRegisterPage" Text="Kaydol" TextColor="Black" FontAttributes="Bold" BackgroundColor="White" BorderWidth="0" Padding="0,0,0,30" Clicked="GoToRegisterPage_Clicked"></Button>
+                </StackLayout>
+            </StackLayout>
+            
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>
